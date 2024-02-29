@@ -1,12 +1,20 @@
 import "./App.css";
+import { useState } from "react";
 
 function App() {
-  let counter = 15;
+  //* This Counter -> variable ; setcounter - it is a function or a method (can say) */
+  const [counter, setcounter] = useState(15);
 
-  //? The Problem in this block is that, The changes are not coming in UI. And this is exactly where state comes into picture.
   const addValue = () => {
-    counter += 1;
-    console.log(counter);
+    setcounter((prevCounter) => prevCounter + 1); // This prevCounter gets the updated state of Countr.
+    setcounter((prevCounter) => prevCounter + 1);
+    setcounter((prevCounter) => prevCounter + 1);
+    setcounter((prevCounter) => prevCounter + 1);
+    setcounter((prevCounter) => prevCounter + 1);
+  };
+
+  const removeValue = () => {
+    setcounter(counter - 1);
   };
   return (
     <>
@@ -14,7 +22,7 @@ function App() {
       <h1> Counter value : {counter} </h1>
       <button onClick={addValue}> Add Value </button>
       {"  "}
-      <button> Remove Value Value </button>
+      <button onClick={removeValue}> Remove Value Value </button>
       <p> Footer : {counter} </p>
     </>
   );
