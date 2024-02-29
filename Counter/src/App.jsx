@@ -6,11 +6,7 @@ function App() {
   const [counter, setcounter] = useState(15);
 
   const addValue = () => {
-    setcounter((prevCounter) => prevCounter + 1); // This prevCounter gets the updated state of Countr.
-    setcounter((prevCounter) => prevCounter + 1);
-    setcounter((prevCounter) => prevCounter + 1);
-    setcounter((prevCounter) => prevCounter + 1);
-    setcounter((prevCounter) => prevCounter + 1);
+    setcounter(counter + 1);
   };
 
   const removeValue = () => {
